@@ -1,0 +1,7 @@
+{
+  "MERCHANT_ID": "SG1219",
+  "PRIVATE_KEY_PATH": "privateKey.pem",
+  "PUBLIC_KEY_PATH": "key_45d000a5eb8341c1a8493568db848e55.pem",
+  "KEY_UUID": "key_45d000a5eb8341c1a8493568db848e55",
+  "PAYMENT_PAGE_CLIENT_ID": "hdfcmaster"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    p {
+      margin-bottom: 0px;
+    }
+  </style>
+  <body>
+    <section>
+      <h2><%= customerName %>,</h2>
+      <p>
+        Thank you so much for your order! We truly appreciate your support and hope you enjoy your digital purchase. If
+        you have any questions or need assistance, feel free to reach out!
+      </p>
+      <p>Please find the attachment of your purchase order here</p>
+      <p style="font-size: 20px; font-weight: 600">Order Summary</p>
+      <table class="table">
+        <tr>
+          <th>Product name</th>
+          <th>Price</th>
+        </tr>
+        <% products.forEach(function(product) { %>
+        <tr>
+          <td><%= product.name %></td>
+          <td>$<%= product.price?.toFixed(2) %></td>
+        </tr>
+        <% }); %>
+      </table>
+      <p><strong>Total Amount: $<%= totalAmount.toFixed(2) %></strong></p>
+      <p>Zip File Links:</p>
+      <ul>
+        <% zipLinks.forEach(function(link, index) { %>
+        <li><a href="<%= link %>">Download Zip File <%= index + 1 %></a></li>
+        <% }); %>
+      </ul>
+
+      <p>Thanks & Regards</p>
+      <p>Raje</p>
+      <p>RG Embroidery Designs</p>
+    </section>
+  </body>
+</html>
