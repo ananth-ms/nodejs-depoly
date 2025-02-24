@@ -41,6 +41,4 @@ yarn dev
   /config
 ```
 
-## 🚀 About Me
 
-Prince Verma, I'm a full stack developer.
